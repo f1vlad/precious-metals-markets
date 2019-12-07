@@ -1,0 +1,39 @@
+{
+  "name": "precious-metals-markets",
+  "version": "1.0.0",
+  "description": "NPM package that returns a boolean depending whether or not precious markets are open or closed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f1vlad/precious-metals-markets.git"
+  },
+  "keywords": [
+    "gold",
+    "silver",
+    "platinum",
+    "palladium",
+    "precious",
+    "metals",
+    "precious",
+    "metals",
+    "markets",
+    "au",
+    "ag",
+    "pt",
+    "pd",
+    "market",
+    "hours",
+    "hours",
+    "of",
+    "operation"
+  ],
+  "author": "f1vlad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/f1vlad/precious-metals-markets/issues"
+  },
+  "homepage": "https://github.com/f1vlad/precious-metals-markets#readme"
+}
