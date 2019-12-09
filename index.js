@@ -21,7 +21,7 @@ module.exports.marketsOpen = (timestamp = Date.now()) => {
         case "2":
         case "3":
         case "4":
-        // Monday, Tuesday, Wednesday, Thursday -- markets closed 17:00--18:00
+            // Monday, Tuesday, Wednesday, Thursday -- markets closed 17:00--18:00
             if (easternHour === 17) {
                 return false;
             }
