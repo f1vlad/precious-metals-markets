@@ -12,7 +12,7 @@
 const moment = require('moment');
 const timezone = require('moment-timezone');
 
-module.exports.marketsOpen = timestamp => {
+module.exports.marketsOpen = (timestamp = Date.now()) => {
     let easternWeekday = moment(timezone(timestamp).tz('America/New_York')).format('d');
     let easternHour = parseInt(moment(timezone(timestamp).tz('America/New_York')).format('HH'));
 
