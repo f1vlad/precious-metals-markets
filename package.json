@@ -1,6 +1,6 @@
 {
   "name": "precious-metals-markets",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "NPM package that returns a boolean depending whether or not precious markets are open or closed",
   "main": "index.js",
   "scripts": {
