@@ -1,5 +1,3 @@
-[![NPM version][npm-version-image]][npm-url] [![MIT License][license-image]][license-url] [![NPM downloads][npm-downloads-image]][downloads-url]
-
 Returns a boolean depending on whether or not precious markets trading is open or closed for a given time. The time provided could be current or in the future/past.
 
 Usage:
