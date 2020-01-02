@@ -11,10 +11,17 @@
 
 const moment = require('moment');
 const timezone = require('moment-timezone');
+let future = '';
 
 module.exports.marketsOpen = (timestamp = Date.now()) => {
     let easternWeekday = moment(timezone(timestamp).tz('America/New_York')).format('d');
     let easternHour = parseInt(moment(timezone(timestamp).tz('America/New_York')).format('HH'));
+
+    const timeTillMarketOpens = (ts, days = 0) => {
+        return moment(
+            moment(ts).add(days, 'days').format('YYYY-MM-DD') + 'T18:00:00-05:00'
+        ).startOf('hour').from(ts);
+    }
 
     switch (easternWeekday) {
         case "1":
@@ -23,23 +30,23 @@ module.exports.marketsOpen = (timestamp = Date.now()) => {
         case "4":
             // Monday, Tuesday, Wednesday, Thursday -- markets closed 17:00--18:00
             if (easternHour === 17) {
-                return false;
+                return timeTillMarketOpens(timestamp);
             }
             return true;
         case "5":
             // Friday -- markets closed after 17:00
             if (easternHour >= 17) {
-                return false;
+                return timeTillMarketOpens(timestamp, 2);
             }
             return true;
         case "6":
             // Saturday
-            return false;
+            return timeTillMarketOpens(timestamp, 1);
         case "0":
             // Sunday -- markets open after 18:00
             if (easternHour >= 18) {
                 return true;
             }
-            return false;
+            return timeTillMarketOpens(timestamp);
     }
 };

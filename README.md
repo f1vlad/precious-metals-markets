@@ -1,4 +1,4 @@
-Returns a boolean depending on whether or not precious markets trading is open or closed for a given time. The time provided could be current or in the future/past.
+Returns a boolean if precious markets trading is open or string time until market opens. The time provided could be current or in the future/past.
 
 Usage:
 ```
