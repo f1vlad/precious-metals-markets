@@ -1,7 +1,7 @@
 
-A node.js module to find out whether precious markets live trading is open or not for a provided time period.
+A node.js module that returns a boolean or a text string based on precious markets trading status in the past, current or in the future.
 
-When markets are open for trading, it returns <code>true</code>. Otherwise, it returns a relative (human readable) string that tells when markets [will be/would be/were] open for trading next.
+When markets are open for trading, it returns <code>true</code>. Otherwise, it returns a relative time string which indicates when markets [will be/would be/were] open for trading next.
 
 Usage:
 ```
