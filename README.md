@@ -20,4 +20,4 @@ markets.marketsOpen(new Date("Wed, 27 March 2019 13:30:00")); // markets status 
 
 Live Demo:
 
-https://stackblitz.com/edit/ionic-q79c1g
+https://stackblitz.com/edit/ionic-q79c1g?embed=1&file=pages/home/home.ts&hideNavigation=1
