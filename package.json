@@ -16,20 +16,15 @@
     "silver",
     "platinum",
     "palladium",
-    "precious",
+    "precious metals",
     "metals",
-    "precious",
-    "metals",
-    "markets",
+    "precious metals markets",
     "au",
     "ag",
     "pt",
     "pd",
-    "market",
-    "hours",
-    "hours",
-    "of",
-    "operation"
+    "market hours",
+    "hours of operation"
   ],
   "author": "f1vlad",
   "license": "MIT",
@@ -41,5 +36,5 @@
   "bugs": {
     "url": "https://github.com/f1vlad/precious-metals-markets/issues"
   },
-  "homepage": "https://github.com/f1vlad/precious-metals-markets#readme"
+  "homepage": "https://metals.live"
 }

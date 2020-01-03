@@ -11,7 +11,6 @@
 
 const moment = require('moment');
 const timezone = require('moment-timezone');
-let future = '';
 
 module.exports.marketsOpen = (timestamp = Date.now()) => {
     let easternWeekday = moment(timezone(timestamp).tz('America/New_York')).format('d');
