@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon test.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -36,5 +36,8 @@
   "bugs": {
     "url": "https://github.com/f1vlad/precious-metals-markets/issues"
   },
-  "homepage": "https://metals.live"
+  "homepage": "https://metals.live",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
 }
