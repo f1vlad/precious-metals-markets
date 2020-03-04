@@ -21,7 +21,7 @@ const timezone = require('moment-timezone');
 
 
 
-module.exports.marketsOpen = (timestamp = Date.now()) => {
+const marketsOpen = (timestamp = Date.now()) => {
     timestamp = moment(timezone(timestamp).tz('America/New_York'));
     let easternWeekday = moment(timezone(timestamp).tz('America/New_York')).format('d');
     let easternHour = parseInt(moment(timezone(timestamp).tz('America/New_York')).format('HH'));
@@ -59,3 +59,5 @@ module.exports.marketsOpen = (timestamp = Date.now()) => {
             return timeTillMarketOpens(timestamp);
     }
 };
+
+module.exports = marketsOpen; 
