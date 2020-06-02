@@ -27,9 +27,12 @@ const marketsOpen = (timestamp = Date.now()) => {
     let easternHour = parseInt(moment(timezone(timestamp).tz('America/New_York')).format('HH'));
 
     const timeTillMarketOpens = (ts, days = 0) => {
-        return moment(
-            moment(ts).add(days, 'days').format('YYYY-MM-DD') + 'T18:00:00-05:00'
-        ).startOf('hour').from(ts);
+        // return moment(moment(ts).add(days, 'days').format('YYYY-MM-DD') + 'T18:00:00-05:00')
+        //         .startOf('hour')
+        //         .from(ts);
+        return moment(moment(ts).add(days, 'days').format('YYYY-MM-DD') + 'T18:00:00')
+                .startOf('hour')
+                .from(ts);
     }
 
     switch (easternWeekday) {
