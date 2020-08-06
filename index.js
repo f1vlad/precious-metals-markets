@@ -18,26 +18,15 @@ const timezone = require('moment-timezone');
  * @param {*} timestamp
  * @returns boolean || string
  */
-
-
-
 const marketsOpen = (timestamp = Date.now()) => {
     timestamp = moment(timezone(timestamp).tz('America/New_York'));
     let easternWeekday = moment(timezone(timestamp).tz('America/New_York')).format('d');
     let easternHour = parseInt(moment(timezone(timestamp).tz('America/New_York')).format('HH'));
 
     const timeTillMarketOpens = (ts, days = 0) => {
-
-        // Convert provided timestamp to eastern
-        ts = moment(timezone(moment(ts)).tz('America/New_York'));
-
-        // return moment(moment(ts).add(days, 'days').format('YYYY-MM-DD') + 'T18:00:00-05:00')
-        //         .startOf('hour')
-        //         .from(ts);
-
-        return moment(moment(ts).add(days, 'days').format('YYYY-MM-DD') + 'T18:00:00')
-                .startOf('hour')
-                .from(ts);
+        let now = moment(ts).format('YYYY-MM-DD HH:mm:ss');
+        let then = moment(ts).add(days, 'days').format('YYYY-MM-DD') + ' 18:00:00';
+        return moment(then).from(now);
     }
 
     switch (easternWeekday) {
